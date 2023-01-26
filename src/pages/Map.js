@@ -1,12 +1,15 @@
 import ArrowCircleLeft from '@mui/icons-material/ArrowCircleLeft';
 import LocationOn from '@mui/icons-material/LocationOn';
 import PlayCircle from '@mui/icons-material/PlayCircle';
+import Switch from '@mui/material/Switch';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Modal from '@mui/material/Modal';
 import Tooltip from '@mui/material/Tooltip';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import SwitchPage from '../components/SwitchPage';
 
 const Map = () => {
 
@@ -19,6 +22,8 @@ const Map = () => {
   const [modal5, setModal5] = useState(false)
   const [modal6, setModal6] = useState(false)
   const [modal7, setModal7] = useState(false)
+
+  const [checkChecked, setCheckChecked] = useState(false);
 
   const handleClick = () => {
     navigate('/page3')
@@ -60,7 +65,7 @@ const Map = () => {
         minWidth='100%'
       />
       {/* Tooltip1 */}
-      <Tooltip placement="top" title={
+      {!checkChecked ? (<Tooltip placement="top" title={
         <>
           <Box
             component='img'
@@ -76,7 +81,7 @@ const Map = () => {
         >
           <LocationOn />
         </IconButton>
-      </Tooltip>
+      </Tooltip>) : null}
 
         <Modal
           open={modal1}
@@ -94,7 +99,7 @@ const Map = () => {
           />
         </Modal>
       {/* Tooltip2 */}
-      <Tooltip placement="top" title={
+      {!checkChecked ? (<Tooltip placement="top" title={
         <>
           <Box
             component='img'
@@ -111,7 +116,7 @@ const Map = () => {
         >
           <LocationOn />
         </IconButton>
-      </Tooltip>
+      </Tooltip>) : null}
 
       <Modal
           open={modal4}
@@ -130,7 +135,7 @@ const Map = () => {
         </Modal>
 
       {/* Tooltip3 */}
-      <Tooltip placement="top" title={
+      {!checkChecked ? (<Tooltip placement="top" title={
         <>
           <Box
             component='img'
@@ -147,7 +152,7 @@ const Map = () => {
         >
           <LocationOn />
         </IconButton>
-      </Tooltip>
+      </Tooltip>) : null}
 
       <Modal
           open={modal3}
@@ -166,7 +171,7 @@ const Map = () => {
         </Modal>
 
       {/* Tooltip4 */}
-      <Tooltip placement="top" title={
+      {!checkChecked ? (<Tooltip placement="top" title={
         <>
           <Box
             component='img'
@@ -183,7 +188,7 @@ const Map = () => {
         >
           <LocationOn />
         </IconButton>
-      </Tooltip>
+      </Tooltip>) : null}
 
       <Modal
           open={modal2}
@@ -202,7 +207,7 @@ const Map = () => {
         </Modal>
 
       {/* Tooltip5 */}
-      <Tooltip placement="top" title={
+      {!checkChecked ? (<Tooltip placement="top" title={
         <>
           <Box
             component='img'
@@ -219,7 +224,7 @@ const Map = () => {
         >
           <LocationOn />
         </IconButton>
-      </Tooltip>
+      </Tooltip>) : null}
 
       <Modal
           open={modal6}
@@ -238,7 +243,7 @@ const Map = () => {
         </Modal>
 
       {/* Tooltip6 */}
-      <Tooltip placement="top" title={
+      {!checkChecked ? <Tooltip placement="top" title={
         <>
           <Box
             component='img'
@@ -255,7 +260,7 @@ const Map = () => {
         >
           <LocationOn />
         </IconButton>
-      </Tooltip>
+      </Tooltip> : null}
 
       <Modal
           open={modal5}
@@ -274,7 +279,7 @@ const Map = () => {
         </Modal>
 
       {/* Tooltip7 */}
-      <Tooltip placement="top" title={
+      {!checkChecked ? <Tooltip placement="top" title={
         <>
           <Box
             component='img'
@@ -291,7 +296,7 @@ const Map = () => {
         >
           <LocationOn />
         </IconButton>
-      </Tooltip>
+      </Tooltip> : null}
 
       <Modal
           open={modal7}
@@ -309,13 +314,19 @@ const Map = () => {
           />
         </Modal>
 
-      <Box display='flex' justifyContent='center' gap={3}>
+      <Box display='flex' justifyContent='center' gap={3} alignItems='center'>
           <IconButton
             onClick={handleClick}
           >
             <ArrowCircleLeft fontSize='large' />
           </IconButton>
+          <Switch
+            checked={checkChecked}
+            onChange={e => setCheckChecked(!checkChecked)}
+            inputProps={{ 'aria-label': 'controlled' }}
+          />
       </Box>
+      {checkChecked ? (<SwitchPage />) : null}
     </Box>
   )
   

@@ -28,6 +28,13 @@ const Header2 = () => {
   
   const content = (
     <Box id='header2' component='section'>
+      <Box      
+                component='video'
+                src={require('../assets/clips/STORY OF CIVILIANS .mov')}
+                width='100%'
+                loop
+                autoPlay
+              />
       <Box
         position='relative'
       >

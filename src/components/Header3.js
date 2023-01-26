@@ -13,7 +13,7 @@ const Header3 = () => {
   }, [])
   
   const content = (
-    <Box mb={5} component='section' id='header3'>
+    <Box component='section' id='header3'>
       <Box
         component='video'
         src={require('../assets/clips/Add a heading.mov')}
@@ -23,7 +23,7 @@ const Header3 = () => {
         controls
       />
 
-        <Grid container spacing={1}>
+        <Grid container>
           <Grid item sm={6} xs={12} 
           >
             <Box className='image'>

@@ -5,7 +5,6 @@ const Header4 = () => {
   const content = (
     <Box
       component='section'
-      mb={5}
       id='header4'
     >
       <Box

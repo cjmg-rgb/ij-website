@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography'
 const AboutUs = () => {
 
   const content = (
-    <Box className='bg-image' textAlign='center' py={10} mb={5}>
+    <Box className='bg-image' textAlign='center' py={10}>
       <Typography
         variant='h5'
         fontWeight='bolder'
@@ -27,6 +27,11 @@ const AboutUs = () => {
         Take some time to explore the website and find what happened to Marawi way back 2017.
         Read and Enjoy!
       </Typography>
+      <Box
+        component='img'
+        width='100%'
+        src={require('../assets/images/Contributors.png')}
+      />
     </Box>
   )
   
