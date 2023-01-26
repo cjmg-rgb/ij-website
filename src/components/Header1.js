@@ -32,18 +32,17 @@ const Header1 = () => {
               smooth
             >
               <Box 
-                sx={{'&:hover': {
+                sx={{
+                  transition: 'transform 0.50s ease-in-out',
+                  '&:hover': {
                   cursor: 'pointer',
-                  transform: 'scale(1.1)',
-                  transition: 'transform 0.50s ease-in-out'
+                  transform: 'scale(1.1)'
                 }}}
                 component='video'
                 src={require('../assets/clips/STORY OF CIVILIANS .mov')}
                 width='100%'
                 loop
                 autoPlay
-                // onMouseLeave={() => setControl1(false)}
-                // onMouseEnter={() => setControl1(true)}
               />
             </Link>
           </Grid>
@@ -58,13 +57,12 @@ const Header1 = () => {
               width='100%'
               loop
               autoPlay
-              sx={{'&:hover': {
+              sx={{
+                transition: 'transform 0.50s ease-in-out',
+                '&:hover': {
                 cursor: 'pointer',
-                transform: 'scale(1.1)',
-                transition: 'transform 0.50s ease-out'
+                transform: 'scale(1.1)'
               }}}
-              // onMouseLeave={() => setControl2(false)}
-              // onMouseEnter={() => setControl2(true)}
             />
           </Link>
           </Grid>
@@ -79,20 +77,18 @@ const Header1 = () => {
               width='100%'
               loop
               autoPlay
-              sx={{'&:hover': {
+              sx={{
+                transition: 'transform 0.50s ease-in-out',
+                '&:hover': {
                 cursor: 'pointer',
-                transform: 'scale(1.1)',
-                transition: 'transform 0.50s ease-out'
+                transform: 'scale(1.1)'
               }}}
-              // onMouseLeave={() => setControl3(false)}
-              // onMouseEnter={() => setControl3(true)}
             />
             </Link>
           </Grid>
         </Grid>
       </Container>
         <Typography
-          // sx={{overflowY: {xs: 'auto', sm: 'auto'}, maxHeight: {xs: 5, sm: 5, md: '100%'}}}
           textAlign='center'
           bgcolor='#373030'
           color='#f2f2f2'

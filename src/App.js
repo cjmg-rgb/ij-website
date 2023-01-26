@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Map from './pages/Map';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
+import TestPage from './pages/TestPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='page2' element={<Page2 />}/>
         <Route path='page3' element={<Page3 />}/>
         <Route path='map' element={<Map />}/>
+        <Route path='test' element={<TestPage />}/>
       </Route>
     </Routes>
   );
