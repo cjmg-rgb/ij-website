@@ -25,7 +25,7 @@ const Page3 = () => {
     >
       <Box
         component='video'
-        src={require('../assets/clips/intro2.mp4')}
+        src={require('../assets/clips/INTRO REVISION.mp4')}
         width='100%'
         controls
         autoPlay

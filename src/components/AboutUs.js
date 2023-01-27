@@ -30,7 +30,7 @@ const AboutUs = () => {
       <Box
         component='img'
         width='100%'
-        src={require('../assets/images/Contributors.png')}
+        src={require('../assets/images/Aboutus2.png')}
       />
     </Box>
   )
